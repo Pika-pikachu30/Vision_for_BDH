@@ -21,7 +21,7 @@ VisionBDHv2(img_size=96, patch_size=8)  # 144 tokens
 | 1 | `train_bdh_stl10.py` | Vision-BDH v2 on STL-10 (main result) |
 | 2 | `train_vit_stl10.py` | ViT-Tiny baseline |
 | 3 | `train_bdh_stl10_ablation_patch.py` | Ablation: patch_size=12 |
-| 4 | `train_label_efficiency.py` | **Novel contribution**: accuracy vs data fraction |
+| 4 | `train_label_efficiency.py` | accuracy vs data fraction |
 
 ## Quick start
 
