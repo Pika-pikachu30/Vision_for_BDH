@@ -2,7 +2,7 @@
 Experiment 4: Label Efficiency — THE NOVEL CONTRIBUTION.
 
 Trains both Vision-BDH v2 and ViT-Tiny with 10%, 25%, 50%, 100% of STL-10 training data.
-Produces the "accuracy vs data fraction" figure — core paper result.
+Produces the "accuracy vs data fraction" figure
 """
 
 import os

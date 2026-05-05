@@ -4,8 +4,6 @@ Experiment 1: Vision-BDH v2 on STL-10 (96×96, patch_size=8 → 144 tokens)
 This is the PRIMARY experiment of the paper.
 Architecture change from CIFAR: img_size=96, patch_size=8 (2 lines changed).
 
-Expected runtime: ~2–3 hours on Kaggle T4 GPU (50 epochs).
-Expected result: ~80–83% test accuracy.
 """
 
 import os

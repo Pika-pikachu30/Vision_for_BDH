@@ -1,7 +1,7 @@
 """
-Analysis and plotting for Vision-BDH STL-10 paper.
+Analysis and plotting for Vision-BDH STL-10 
 
-Generates all figures used in the paper:
+Generates all figures:
   1. Learning curves (BDH vs ViT-Tiny on STL-10)
   2. Results summary table
   3. Label efficiency figure (the key novel contribution plot)
