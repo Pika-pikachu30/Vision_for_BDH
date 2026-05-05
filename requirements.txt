@@ -1,0 +1,11 @@
+# Vision-BDH STL-10 requirements
+# Matches -- 2025's environment, extended for our experiments
+
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Optional but recommended
+# tqdm  # progress bars (can add to training loops if desired)
