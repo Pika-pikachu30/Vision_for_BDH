@@ -31,7 +31,7 @@ CONFIG = {
     "img_size": 96,
     "patch_size": 8,
     "num_classes": 10,
-    "epochs": 150,
+    "epochs": 50,
     "batch_size": 32,
     "lr": 1e-4,
     "weight_decay": 0.05,
