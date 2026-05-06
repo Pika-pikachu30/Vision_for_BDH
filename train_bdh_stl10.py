@@ -39,7 +39,7 @@ CONFIG = {
     "n_tokens": 144,         # (96/8)² = 144 tokens
     "num_classes": 10,
 
-    "epochs": 150,
+    "epochs": 50,
     "batch_size": 32,
     "lr": 1e-4,
     "weight_decay": 0.05,
