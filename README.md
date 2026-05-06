@@ -1,7 +1,5 @@
 # Vision-BDH Beyond 32×32: STL-10 Experiments
 
-**Paper:** "Vision-BDH Beyond 32×32: Evaluating Bio-Inspired Sparse Attention on Data-Scarce, Higher-Resolution Image Classification"
-
 Extends [Pika 2025 (takzen/vision-bdh)](https://github.com/takzen/vision-bdh) to STL-10 (96×96, 5000 samples).
 
 ## Architecture change from CIFAR → STL-10
@@ -21,7 +19,7 @@ VisionBDHv2(img_size=96, patch_size=8)  # 144 tokens
 | 1 | `train_bdh_stl10.py` | Vision-BDH v2 on STL-10 (main result) |
 | 2 | `train_vit_stl10.py` | ViT-Tiny baseline |
 | 3 | `train_bdh_stl10_ablation_patch.py` | Ablation: patch_size=12 |
-| 4 | `train_label_efficiency.py` | **Novel contribution**: accuracy vs data fraction |
+| 4 | `train_label_efficiency.py` | accuracy vs data fraction |
 
 ## Quick start
 
@@ -62,7 +60,7 @@ vision-bdh-stl10/
 ├── run_all_experiments.py        # Master runner
 ├── verify_setup.py               # Pre-flight check
 ├── analysis/
-│   └── analyze_stl10.py         # All paper figures
+│   └── analyze_stl10.py         # All figures
 ├── interpretability/
 │   └── visualize_attention_stl10.py  # Attention maps
 └── scripts/

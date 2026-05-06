@@ -123,7 +123,7 @@ class BDHAttention(nn.Module):
         # attn: (B, nh, T, T) via outer product of sparse latents
         # Q=K means attn[i,j] = dot(sparse(x_i), sparse(x_j))
         N = x_latent.shape[2]
-        attn = torch.einsum('bnti,bnsi->bnts', x_latent, x_latent) / math.sqrt(N) # (B, nh, T, T)
+        attn = torch.einsum('bnti,bnsi->bnts', x_latent, x_latent) # / math.sqrt(N) # (can change this)
         # NO softmax — raw scores, bounded by RoPE & Q=K natural normalization
         attn = self.dropout(attn)
 
