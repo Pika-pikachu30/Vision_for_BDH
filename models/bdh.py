@@ -144,32 +144,17 @@ class BDHAttention(nn.Module):
 
 
 class BDHBlock(nn.Module):
-    """Single BDH block: Pre-LN + BDH attention + SIGMOID GATING."""
+    """Single BDH block: Pre-LN + BDH attention + multiplicative gating."""
     def __init__(self, config: BDHConfig, n_tokens: int):
         super().__init__()
         self.ln = nn.LayerNorm(config.n_embd)
         self.attn = BDHAttention(config, n_tokens)
         self.dropout = nn.Dropout(config.dropout)
-        
-        self.gate_proj = nn.Linear(config.n_embd, config.n_embd)
-        # Initialize gate bias to a small positive value (e.g., 1.0) 
-        # to start with a "mostly open" gate during early training.
-        nn.init.constant_(self.gate_proj.bias, 1.0)
-
+ 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        # Pre-LayerNorm
         x_norm = self.ln(x)
-        
-        # Calculate the Attention output
         attn_out = self.attn(x_norm)
         attn_out = self.dropout(attn_out)
-        
-        # --- NEW GATING LOGIC ---
-        # Compute the sigmoid gate based on the normalized input
-        # This allows the model to selectively 'write' to the state
-        gate = torch.sigmoid(self.gate_proj(x_norm))
-        
-        x = x + (gate * attn_out) 
-        # ------------------------
-        
+        # Residual connection
+        x = x + attn_out
         return x
