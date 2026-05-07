@@ -1,6 +1,8 @@
 """
+
 Shared training utilities for all Vision-BDH STL-10 experiments.
 Keeps training scripts DRY — all experiments import from here.
+
 """
 
 import os
@@ -63,74 +65,72 @@ class MetricsLogger:
 
 
 # ─────────────────────────────────────────────
-# Checkpoint management
+# Checkpoint management — FIXED
 # ─────────────────────────────────────────────
 
 class CheckpointManager:
-    """Save / load checkpoints, tracking best validation accuracy."""
+    """
+    Saves ONLY the single best model checkpoint.
 
-    def __init__(self, checkpoint_dir: str, keep_best: bool = True):
+    Changes from original:
+    - No per-epoch checkpoint_epoch_*.pth files (was saving 100 files per run)
+    - Deletes previous best before saving new best (keeps disk at 1 file max)
+    - Does NOT save optimizer state (halves file size; we never resume mid-run)
+    """
+
+    def __init__(self, checkpoint_dir: str):
         self.checkpoint_dir = checkpoint_dir
-        self.keep_best = keep_best
         self.best_val_acc = 0.0
-        self.best_path = ""
+        self.best_path = None
         os.makedirs(checkpoint_dir, exist_ok=True)
 
     def save(
         self,
         model: nn.Module,
-        optimizer: torch.optim.Optimizer,
+        optimizer: torch.optim.Optimizer,  # kept for API compatibility, not used
         epoch: int,
         val_accuracy: float,
         extra: Optional[Dict] = None,
     ) -> str:
-        path = os.path.join(self.checkpoint_dir, f"checkpoint_epoch_{epoch:03d}.pth")
+        """Only saves if val_accuracy is a new best. Returns path or empty string."""
+        if val_accuracy <= self.best_val_acc:
+            return ""
+
+        # Delete previous best to free disk space
+        if self.best_path and os.path.exists(self.best_path):
+            os.remove(self.best_path)
+
+        self.best_val_acc = val_accuracy
+        self.best_path = os.path.join(
+            self.checkpoint_dir,
+            f"best_model_acc{val_accuracy:.2f}.pth"
+        )
+
         payload = {
             "epoch": epoch,
             "model_state_dict": model.state_dict(),
-            "optimizer_state_dict": optimizer.state_dict(),
             "val_accuracy": val_accuracy,
         }
         if extra:
             payload.update(extra)
-        torch.save(payload, path)
 
-        if val_accuracy > self.best_val_acc:
-            self.best_val_acc = val_accuracy
-            self.best_path = os.path.join(
-                self.checkpoint_dir, f"best_model_acc{val_accuracy:.2f}.pth"
-            )
-            torch.save(payload, self.best_path)
-
-        return path
-
-    def load_latest(self, model: nn.Module, optimizer: Optional[torch.optim.Optimizer] = None):
-        """Load most recent checkpoint. Returns start_epoch."""
-        checkpoints = sorted(glob.glob(os.path.join(self.checkpoint_dir, "checkpoint_epoch_*.pth")))
-        if not checkpoints:
-            print("No checkpoints found — starting fresh.")
-            return 0
-
-        path = checkpoints[-1]
-        print(f"Resuming from: {path}")
-        ckpt = torch.load(path, map_location="cpu")
-        model.load_state_dict(ckpt["model_state_dict"])
-        if optimizer and "optimizer_state_dict" in ckpt:
-            optimizer.load_state_dict(ckpt["optimizer_state_dict"])
-        return ckpt["epoch"] + 1
+        torch.save(payload, self.best_path)
+        return self.best_path
 
     def load_best(self, model: nn.Module) -> float:
-        """Load the best checkpoint. Returns best val accuracy."""
-        # Find all best_model files and pick highest accuracy
+        """Load the best checkpoint into model. Returns best val accuracy."""
+        if self.best_path and os.path.exists(self.best_path):
+            ckpt = torch.load(self.best_path, map_location="cpu")
+            model.load_state_dict(ckpt["model_state_dict"])
+            print(f"Loading best model: {self.best_path} (val_acc={self.best_val_acc:.2f}%)")
+            return self.best_val_acc
+
+        # Fallback: scan directory for any saved best (e.g. after crash)
         bests = glob.glob(os.path.join(self.checkpoint_dir, "best_model_acc*.pth"))
         if not bests:
-            # Fall back to all checkpoints
-            bests = sorted(glob.glob(os.path.join(self.checkpoint_dir, "checkpoint_epoch_*.pth")))
-        if not bests:
-            print("No best checkpoint found.")
+            print("No best checkpoint found — using current model weights.")
             return 0.0
 
-        # Pick highest val_accuracy
         best_acc = 0.0
         best_path = bests[0]
         for p in bests:
@@ -143,6 +143,15 @@ class CheckpointManager:
         ckpt = torch.load(best_path, map_location="cpu")
         model.load_state_dict(ckpt["model_state_dict"])
         return best_acc
+
+    def load_latest(self, model: nn.Module, optimizer=None) -> int:
+        """
+        Kept for API compatibility with other training scripts.
+        With best-only saving, this is equivalent to load_best.
+        Returns start_epoch (always 0 since we don't save per-epoch).
+        """
+        self.load_best(model)
+        return 0
 
 
 # ─────────────────────────────────────────────
