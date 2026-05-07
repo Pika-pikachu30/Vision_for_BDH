@@ -1,4 +1,3 @@
-
 ######################################################################
 # STARTING: Exp 4: Label Efficiency (BDH vs ViT @ 10/25/50/100% data)
 ######################################################################
@@ -24,35 +23,322 @@ GPU: Tesla T4
   bdh | 10% data | 100 epochs
 ======================================================================
 STL-10 [10%] | Train: 450 | Val: 500 | Test: 8000
-  [bdh_frac010] Ep  10/100 | Loss: 2.1891 | Val: 17.20% | Best: 26.80%
-  [bdh_frac010] Ep  20/100 | Loss: 1.9505 | Val: 28.00% | Best: 30.60%
-  [bdh_frac010] Ep  30/100 | Loss: 1.7579 | Val: 29.80% | Best: 33.00%
-  [bdh_frac010] Ep  40/100 | Loss: 1.6052 | Val: 32.20% | Best: 33.60%
-  [bdh_frac010] Ep  50/100 | Loss: 1.5165 | Val: 34.60% | Best: 36.80%
-  [bdh_frac010] Ep  60/100 | Loss: 1.4328 | Val: 34.80% | Best: 36.80%
-  [bdh_frac010] Ep  70/100 | Loss: 1.3435 | Val: 34.20% | Best: 37.20%
-  [bdh_frac010] Ep  80/100 | Loss: 1.2708 | Val: 36.00% | Best: 37.20%
-  [bdh_frac010] Ep  90/100 | Loss: 1.2546 | Val: 36.80% | Best: 37.20%
-  [bdh_frac010] Ep 100/100 | Loss: 1.1528 | Val: 36.60% | Best: 37.20%
-Loading best model: ./results_label_efficiency/bdh_frac010/best_model_acc37.20.pth (val_acc=37.20%)
+  [bdh_frac010] Ep  10/100 | Loss: 2.0956 | Val: 23.00% | Best: 27.60%
+  [bdh_frac010] Ep  20/100 | Loss: 1.8752 | Val: 32.20% | Best: 32.20%
+  [bdh_frac010] Ep  30/100 | Loss: 1.7698 | Val: 34.60% | Best: 34.60%
+  [bdh_frac010] Ep  40/100 | Loss: 1.6175 | Val: 39.20% | Best: 39.20%
+  [bdh_frac010] Ep  50/100 | Loss: 1.5175 | Val: 35.00% | Best: 39.20%
+  [bdh_frac010] Ep  60/100 | Loss: 1.4513 | Val: 35.80% | Best: 39.20%
+  [bdh_frac010] Ep  70/100 | Loss: 1.3973 | Val: 37.60% | Best: 39.40%
+  [bdh_frac010] Ep  80/100 | Loss: 1.3759 | Val: 38.00% | Best: 39.40%
+  [bdh_frac010] Ep  90/100 | Loss: 1.2996 | Val: 38.20% | Best: 40.00%
+  [bdh_frac010] Ep 100/100 | Loss: 1.3272 | Val: 37.80% | Best: 40.00%
+Loading best model: ./results_label_efficiency/bdh_frac010/best_model_acc40.00.pth (val_acc=40.00%)
 
-  [bdh_frac010] FINAL TEST: 35.59% (best val: 37.20%)
+  [bdh_frac010] FINAL TEST: 37.24% (best val: 40.00%)
 [ViT-Tiny] img=96×96, patch=8×8, tokens=144, params=5.41M
 
 ======================================================================
   vit | 10% data | 100 epochs
 ======================================================================
 STL-10 [10%] | Train: 450 | Val: 500 | Test: 8000
-  [vit_frac010] Ep  10/100 | Loss: 1.8850 | Val: 33.00% | Best: 33.00%
-  [vit_frac010] Ep  20/100 | Loss: 1.6111 | Val: 34.00% | Best: 35.40%
-  [vit_frac010] Ep  30/100 | Loss: 1.2389 | Val: 32.00% | Best: 35.40%
-  [vit_frac010] Ep  40/100 | Loss: 1.0027 | Val: 35.60% | Best: 35.60%
-  [vit_frac010] Ep  50/100 | Loss: 0.8247 | Val: 36.20% | Best: 36.40%
-  [vit_frac010] Ep  60/100 | Loss: 0.6166 | Val: 37.60% | Best: 37.60%
-  [vit_frac010] Ep  70/100 | Loss: 0.4558 | Val: 37.00% | Best: 39.00%
-  [vit_frac010] Ep  80/100 | Loss: 0.3817 | Val: 37.80% | Best: 39.20%
-  [vit_frac010] Ep  90/100 | Loss: 0.3487 | Val: 38.60% | Best: 39.20%
-  [vit_frac010] Ep 100/100 | Loss: 0.3537 | Val: 37.60% | Best: 39.20%
-Loading best model: ./results_label_efficiency/vit_frac010/best_model_acc39.20.pth (val_acc=39.20%)
+  [vit_frac010] Ep  10/100 | Loss: 1.8893 | Val: 28.80% | Best: 29.80%
+  [vit_frac010] Ep  20/100 | Loss: 1.5498 | Val: 30.00% | Best: 34.80%
+  [vit_frac010] Ep  30/100 | Loss: 1.2674 | Val: 33.60% | Best: 36.80%
+  [vit_frac010] Ep  40/100 | Loss: 0.9871 | Val: 35.00% | Best: 36.80%
+  [vit_frac010] Ep  50/100 | Loss: 0.7048 | Val: 33.40% | Best: 36.80%
+  [vit_frac010] Ep  60/100 | Loss: 0.5461 | Val: 34.40% | Best: 37.40%
+  [vit_frac010] Ep  70/100 | Loss: 0.4603 | Val: 33.60% | Best: 37.40%
+  [vit_frac010] Ep  80/100 | Loss: 0.3654 | Val: 35.20% | Best: 37.40%
+  [vit_frac010] Ep  90/100 | Loss: 0.3438 | Val: 34.20% | Best: 37.40%
+  [vit_frac010] Ep 100/100 | Loss: 0.3410 | Val: 34.60% | Best: 37.40%
+Loading best model: ./results_label_efficiency/vit_frac010/best_model_acc37.40.pth (val_acc=37.40%)
 
-  [vit_frac010] FINAL TEST: 34.98% (best val: 39.20%)
+  [vit_frac010] FINAL TEST: 34.65% (best val: 37.40%)
+[VisionBDHv2] img=96×96, patch=8×8, tokens=144, params=3.32M
+
+======================================================================
+  bdh | 25% data | 80 epochs
+======================================================================
+STL-10 [25%] | Train: 1120 | Val: 500 | Test: 8000
+  [bdh_frac025] Ep  10/80 | Loss: 1.8761 | Val: 27.40% | Best: 31.00%
+  [bdh_frac025] Ep  20/80 | Loss: 1.6890 | Val: 35.00% | Best: 36.00%
+  [bdh_frac025] Ep  30/80 | Loss: 1.6462 | Val: 39.40% | Best: 41.00%
+  [bdh_frac025] Ep  40/80 | Loss: 1.5327 | Val: 41.40% | Best: 42.20%
+  [bdh_frac025] Ep  50/80 | Loss: 1.4045 | Val: 40.60% | Best: 42.60%
+  [bdh_frac025] Ep  60/80 | Loss: 1.3033 | Val: 41.00% | Best: 42.80%
+  [bdh_frac025] Ep  70/80 | Loss: 1.2456 | Val: 41.20% | Best: 42.80%
+  [bdh_frac025] Ep  80/80 | Loss: 1.2263 | Val: 41.40% | Best: 42.80%
+Loading best model: ./results_label_efficiency/bdh_frac025/best_model_acc42.80.pth (val_acc=42.80%)
+
+  [bdh_frac025] FINAL TEST: 41.67% (best val: 42.80%)
+[ViT-Tiny] img=96×96, patch=8×8, tokens=144, params=5.41M
+
+======================================================================
+  vit | 25% data | 80 epochs
+======================================================================
+STL-10 [25%] | Train: 1120 | Val: 500 | Test: 8000
+  [vit_frac025] Ep  10/80 | Loss: 1.7325 | Val: 33.00% | Best: 35.20%
+  [vit_frac025] Ep  20/80 | Loss: 1.5176 | Val: 38.80% | Best: 40.60%
+  [vit_frac025] Ep  30/80 | Loss: 1.2530 | Val: 39.60% | Best: 42.00%
+  [vit_frac025] Ep  40/80 | Loss: 1.0299 | Val: 42.80% | Best: 44.40%
+  [vit_frac025] Ep  50/80 | Loss: 0.7897 | Val: 44.40% | Best: 44.40%
+  [vit_frac025] Ep  60/80 | Loss: 0.6117 | Val: 43.80% | Best: 45.80%
+  [vit_frac025] Ep  70/80 | Loss: 0.5141 | Val: 46.20% | Best: 46.40%
+  [vit_frac025] Ep  80/80 | Loss: 0.4798 | Val: 45.80% | Best: 46.40%
+Loading best model: ./results_label_efficiency/vit_frac025/best_model_acc46.40.pth (val_acc=46.40%)
+
+  [vit_frac025] FINAL TEST: 42.36% (best val: 46.40%)
+[VisionBDHv2] img=96×96, patch=8×8, tokens=144, params=3.32M
+
+======================================================================
+  bdh | 50% data | 60 epochs
+======================================================================
+STL-10 [50%] | Train: 2250 | Val: 500 | Test: 8000
+  Epoch 1/60 | Batch 50/71 | Loss: 2.3212 | LR: 0.000025
+  Epoch 2/60 | Batch 50/71 | Loss: 2.1543 | LR: 0.000061
+  Epoch 3/60 | Batch 50/71 | Loss: 2.2788 | LR: 0.000096
+  Epoch 4/60 | Batch 50/71 | Loss: 1.7731 | LR: 0.000100
+  Epoch 5/60 | Batch 50/71 | Loss: 1.9754 | LR: 0.000100
+  Epoch 6/60 | Batch 50/71 | Loss: 1.8697 | LR: 0.000099
+  Epoch 7/60 | Batch 50/71 | Loss: 1.7501 | LR: 0.000099
+  Epoch 8/60 | Batch 50/71 | Loss: 2.0371 | LR: 0.000098
+  Epoch 9/60 | Batch 50/71 | Loss: 1.8664 | LR: 0.000097
+  Epoch 10/60 | Batch 50/71 | Loss: 1.8742 | LR: 0.000096
+  [bdh_frac050] Ep  10/60 | Loss: 1.7464 | Val: 37.60% | Best: 38.40%
+  Epoch 11/60 | Batch 50/71 | Loss: 1.6463 | LR: 0.000095
+  Epoch 12/60 | Batch 50/71 | Loss: 1.7193 | LR: 0.000094
+  Epoch 13/60 | Batch 50/71 | Loss: 1.9206 | LR: 0.000093
+  Epoch 14/60 | Batch 50/71 | Loss: 1.6289 | LR: 0.000091
+  Epoch 15/60 | Batch 50/71 | Loss: 1.5140 | LR: 0.000090
+  Epoch 16/60 | Batch 50/71 | Loss: 1.6302 | LR: 0.000088
+  Epoch 17/60 | Batch 50/71 | Loss: 1.8273 | LR: 0.000086
+  Epoch 18/60 | Batch 50/71 | Loss: 1.7250 | LR: 0.000084
+  Epoch 19/60 | Batch 50/71 | Loss: 1.4457 | LR: 0.000082
+  Epoch 20/60 | Batch 50/71 | Loss: 1.8702 | LR: 0.000080
+  [bdh_frac050] Ep  20/60 | Loss: 1.6037 | Val: 38.60% | Best: 41.40%
+  Epoch 21/60 | Batch 50/71 | Loss: 1.2792 | LR: 0.000078
+  Epoch 22/60 | Batch 50/71 | Loss: 1.5684 | LR: 0.000075
+  Epoch 23/60 | Batch 50/71 | Loss: 1.4564 | LR: 0.000073
+  Epoch 24/60 | Batch 50/71 | Loss: 1.4799 | LR: 0.000071
+  Epoch 25/60 | Batch 50/71 | Loss: 1.4252 | LR: 0.000068
+  Epoch 26/60 | Batch 50/71 | Loss: 1.4680 | LR: 0.000065
+  Epoch 27/60 | Batch 50/71 | Loss: 1.3936 | LR: 0.000063
+  Epoch 28/60 | Batch 50/71 | Loss: 1.7045 | LR: 0.000060
+  Epoch 29/60 | Batch 50/71 | Loss: 1.3390 | LR: 0.000057
+  Epoch 30/60 | Batch 50/71 | Loss: 1.5113 | LR: 0.000055
+  [bdh_frac050] Ep  30/60 | Loss: 1.4686 | Val: 47.20% | Best: 47.20%
+  Epoch 31/60 | Batch 50/71 | Loss: 1.4214 | LR: 0.000052
+  Epoch 32/60 | Batch 50/71 | Loss: 1.2529 | LR: 0.000049
+  Epoch 33/60 | Batch 50/71 | Loss: 1.4724 | LR: 0.000046
+  Epoch 34/60 | Batch 50/71 | Loss: 1.5353 | LR: 0.000044
+  Epoch 35/60 | Batch 50/71 | Loss: 1.3796 | LR: 0.000041
+  Epoch 36/60 | Batch 50/71 | Loss: 1.5113 | LR: 0.000038
+  Epoch 38/60 | Batch 50/71 | Loss: 1.2459 | LR: 0.000033
+  Epoch 39/60 | Batch 50/71 | Loss: 1.4537 | LR: 0.000030
+  Epoch 40/60 | Batch 50/71 | Loss: 1.1559 | LR: 0.000028
+  [bdh_frac050] Ep  40/60 | Loss: 1.3502 | Val: 46.80% | Best: 48.80%
+  Epoch 41/60 | Batch 50/71 | Loss: 1.2793 | LR: 0.000026
+  Epoch 42/60 | Batch 50/71 | Loss: 1.4039 | LR: 0.000023
+  Epoch 43/60 | Batch 50/71 | Loss: 1.2943 | LR: 0.000021
+  Epoch 44/60 | Batch 50/71 | Loss: 1.4238 | LR: 0.000019
+  Epoch 45/60 | Batch 50/71 | Loss: 1.6123 | LR: 0.000017
+  Epoch 46/60 | Batch 50/71 | Loss: 1.1852 | LR: 0.000015
+  Epoch 47/60 | Batch 50/71 | Loss: 1.3461 | LR: 0.000013
+  Epoch 48/60 | Batch 50/71 | Loss: 1.1669 | LR: 0.000011
+  Epoch 49/60 | Batch 50/71 | Loss: 1.1375 | LR: 0.000009
+  Epoch 50/60 | Batch 50/71 | Loss: 1.1333 | LR: 0.000008
+  [bdh_frac050] Ep  50/60 | Loss: 1.2490 | Val: 49.20% | Best: 51.00%
+  Epoch 51/60 | Batch 50/71 | Loss: 1.2636 | LR: 0.000006
+  Epoch 52/60 | Batch 50/71 | Loss: 1.1495 | LR: 0.000005
+  Epoch 53/60 | Batch 50/71 | Loss: 1.1726 | LR: 0.000004
+  Epoch 54/60 | Batch 50/71 | Loss: 1.0756 | LR: 0.000003
+  Epoch 55/60 | Batch 50/71 | Loss: 1.3007 | LR: 0.000002
+  Epoch 56/60 | Batch 50/71 | Loss: 1.1848 | LR: 0.000001
+  Epoch 57/60 | Batch 50/71 | Loss: 1.2892 | LR: 0.000001
+  Epoch 58/60 | Batch 50/71 | Loss: 1.2353 | LR: 0.000000
+  Epoch 59/60 | Batch 50/71 | Loss: 1.1161 | LR: 0.000000
+  Epoch 60/60 | Batch 50/71 | Loss: 1.2848 | LR: 0.000000
+  [bdh_frac050] Ep  60/60 | Loss: 1.2225 | Val: 49.40% | Best: 51.00%
+Loading best model: ./results_label_efficiency/bdh_frac050/best_model_acc51.00.pth (val_acc=51.00%)
+
+  [bdh_frac050] FINAL TEST: 47.69% (best val: 51.00%)
+[ViT-Tiny] img=96×96, patch=8×8, tokens=144, params=5.41M
+
+======================================================================
+  vit | 50% data | 60 epochs
+======================================================================
+STL-10 [50%] | Train: 2250 | Val: 500 | Test: 8000
+  Epoch 1/60 | Batch 50/71 | Loss: 2.1865 | LR: 0.000025
+  Epoch 2/60 | Batch 50/71 | Loss: 2.0081 | LR: 0.000061
+  Epoch 3/60 | Batch 50/71 | Loss: 2.0745 | LR: 0.000096
+  Epoch 4/60 | Batch 50/71 | Loss: 1.8357 | LR: 0.000100
+  Epoch 5/60 | Batch 50/71 | Loss: 1.8077 | LR: 0.000100
+  Epoch 6/60 | Batch 50/71 | Loss: 1.9950 | LR: 0.000099
+  Epoch 7/60 | Batch 50/71 | Loss: 1.7157 | LR: 0.000099
+  Epoch 8/60 | Batch 50/71 | Loss: 1.8145 | LR: 0.000098
+  Epoch 9/60 | Batch 50/71 | Loss: 1.6156 | LR: 0.000097
+  Epoch 10/60 | Batch 50/71 | Loss: 1.7500 | LR: 0.000096
+  [vit_frac050] Ep  10/60 | Loss: 1.6484 | Val: 38.00% | Best: 41.40%
+  Epoch 11/60 | Batch 50/71 | Loss: 1.3705 | LR: 0.000095
+  Epoch 12/60 | Batch 50/71 | Loss: 1.5282 | LR: 0.000094
+  Epoch 13/60 | Batch 50/71 | Loss: 1.8393 | LR: 0.000093
+  Epoch 14/60 | Batch 50/71 | Loss: 1.5158 | LR: 0.000091
+  Epoch 15/60 | Batch 50/71 | Loss: 1.6136 | LR: 0.000090
+  Epoch 16/60 | Batch 50/71 | Loss: 1.4412 | LR: 0.000088
+  Epoch 17/60 | Batch 50/71 | Loss: 1.3724 | LR: 0.000086
+  Epoch 18/60 | Batch 50/71 | Loss: 1.3696 | LR: 0.000084
+  Epoch 19/60 | Batch 50/71 | Loss: 1.5280 | LR: 0.000082
+  Epoch 20/60 | Batch 50/71 | Loss: 1.2655 | LR: 0.000080
+  [vit_frac050] Ep  20/60 | Loss: 1.4136 | Val: 44.20% | Best: 48.60%
+  Epoch 21/60 | Batch 50/71 | Loss: 1.3261 | LR: 0.000078
+  Epoch 22/60 | Batch 50/71 | Loss: 1.2692 | LR: 0.000075
+  Epoch 23/60 | Batch 50/71 | Loss: 1.3576 | LR: 0.000073
+  Epoch 24/60 | Batch 50/71 | Loss: 1.3649 | LR: 0.000071
+  Epoch 25/60 | Batch 50/71 | Loss: 1.4112 | LR: 0.000068
+  Epoch 26/60 | Batch 50/71 | Loss: 1.2874 | LR: 0.000065
+  Epoch 27/60 | Batch 50/71 | Loss: 1.0600 | LR: 0.000063
+  Epoch 28/60 | Batch 50/71 | Loss: 1.4842 | LR: 0.000060
+  Epoch 29/60 | Batch 50/71 | Loss: 1.2885 | LR: 0.000057
+  Epoch 30/60 | Batch 50/71 | Loss: 1.0383 | LR: 0.000055
+  [vit_frac050] Ep  30/60 | Loss: 1.2032 | Val: 47.20% | Best: 48.80%
+  Epoch 31/60 | Batch 50/71 | Loss: 0.9021 | LR: 0.000052
+  Epoch 32/60 | Batch 50/71 | Loss: 1.1103 | LR: 0.000049
+  Epoch 33/60 | Batch 50/71 | Loss: 0.8894 | LR: 0.000046
+  Epoch 34/60 | Batch 50/71 | Loss: 1.0641 | LR: 0.000044
+  Epoch 35/60 | Batch 50/71 | Loss: 1.1450 | LR: 0.000041
+  Epoch 36/60 | Batch 50/71 | Loss: 1.0955 | LR: 0.000038
+  Epoch 37/60 | Batch 50/71 | Loss: 1.1291 | LR: 0.000036
+  Epoch 38/60 | Batch 50/71 | Loss: 0.7207 | LR: 0.000033
+  Epoch 39/60 | Batch 50/71 | Loss: 0.9941 | LR: 0.000030
+  Epoch 40/60 | Batch 50/71 | Loss: 0.8407 | LR: 0.000028
+  [vit_frac050] Ep  40/60 | Loss: 0.9770 | Val: 47.80% | Best: 50.60%
+  Epoch 41/60 | Batch 50/71 | Loss: 0.9532 | LR: 0.000026
+  Epoch 42/60 | Batch 50/71 | Loss: 0.8099 | LR: 0.000023
+  Epoch 43/60 | Batch 50/71 | Loss: 0.9392 | LR: 0.000021
+  Epoch 44/60 | Batch 50/71 | Loss: 0.9103 | LR: 0.000019
+  Epoch 45/60 | Batch 50/71 | Loss: 0.8175 | LR: 0.000017
+  Epoch 46/60 | Batch 50/71 | Loss: 0.7819 | LR: 0.000015
+  Epoch 47/60 | Batch 50/71 | Loss: 0.9302 | LR: 0.000013
+  Epoch 48/60 | Batch 50/71 | Loss: 0.7677 | LR: 0.000011
+  Epoch 49/60 | Batch 50/71 | Loss: 0.9628 | LR: 0.000009
+  Epoch 50/60 | Batch 50/71 | Loss: 1.0040 | LR: 0.000008
+  [vit_frac050] Ep  50/60 | Loss: 0.7979 | Val: 50.40% | Best: 52.40%
+  Epoch 51/60 | Batch 50/71 | Loss: 0.7237 | LR: 0.000006
+  Epoch 52/60 | Batch 50/71 | Loss: 0.8106 | LR: 0.000005
+  Epoch 53/60 | Batch 50/71 | Loss: 0.8229 | LR: 0.000004
+  Epoch 54/60 | Batch 50/71 | Loss: 0.6271 | LR: 0.000003
+  Epoch 55/60 | Batch 50/71 | Loss: 0.7627 | LR: 0.000002
+  Epoch 56/60 | Batch 50/71 | Loss: 0.7588 | LR: 0.000001
+  Epoch 57/60 | Batch 50/71 | Loss: 0.8034 | LR: 0.000001
+  Epoch 58/60 | Batch 50/71 | Loss: 0.7246 | LR: 0.000000
+  Epoch 59/60 | Batch 50/71 | Loss: 0.7762 | LR: 0.000000
+  Epoch 60/60 | Batch 50/71 | Loss: 0.6435 | LR: 0.000000
+  [vit_frac050] Ep  60/60 | Loss: 0.7472 | Val: 51.80% | Best: 52.40%
+Loading best model: ./results_label_efficiency/vit_frac050/best_model_acc52.40.pth (val_acc=52.40%)
+
+  [vit_frac050] FINAL TEST: 50.80% (best val: 52.40%)
+[VisionBDHv2] img=96×96, patch=8×8, tokens=144, params=3.32M
+
+======================================================================
+  bdh | 100% data | 50 epochs
+======================================================================
+STL-10 loaded | Train: 4500 | Val: 500 | Test: 8000
+  Epoch 1/50 | Batch 50/140 | Loss: 2.0214 | LR: 0.000025
+  Epoch 1/50 | Batch 100/140 | Loss: 2.0840 | LR: 0.000050
+  Epoch 2/50 | Batch 50/140 | Loss: 2.1966 | LR: 0.000095
+  Epoch 2/50 | Batch 100/140 | Loss: 1.9234 | LR: 0.000100
+  Epoch 3/50 | Batch 50/140 | Loss: 2.0130 | LR: 0.000100
+  Epoch 3/50 | Batch 100/140 | Loss: 1.9083 | LR: 0.000100
+  Epoch 4/50 | Batch 50/140 | Loss: 1.7356 | LR: 0.000100
+  Epoch 4/50 | Batch 100/140 | Loss: 1.9754 | LR: 0.000099
+  Epoch 5/50 | Batch 50/140 | Loss: 1.6889 | LR: 0.000099
+  Epoch 5/50 | Batch 100/140 | Loss: 1.5646 | LR: 0.000099
+  Epoch 6/50 | Batch 50/140 | Loss: 1.7312 | LR: 0.000098
+  Epoch 6/50 | Batch 100/140 | Loss: 1.6347 | LR: 0.000098
+  Epoch 7/50 | Batch 50/140 | Loss: 1.7707 | LR: 0.000097
+  Epoch 7/50 | Batch 100/140 | Loss: 1.5423 | LR: 0.000097
+  Epoch 8/50 | Batch 50/140 | Loss: 1.6876 | LR: 0.000096
+  Epoch 8/50 | Batch 100/140 | Loss: 1.6209 | LR: 0.000096
+  Epoch 9/50 | Batch 50/140 | Loss: 1.7085 | LR: 0.000095
+  Epoch 9/50 | Batch 100/140 | Loss: 1.7071 | LR: 0.000095
+  Epoch 10/50 | Batch 50/140 | Loss: 1.5770 | LR: 0.000094
+  Epoch 10/50 | Batch 100/140 | Loss: 1.9121 | LR: 0.000093
+  [bdh_frac100] Ep  10/50 | Loss: 1.6370 | Val: 40.00% | Best: 40.00%
+  Epoch 11/50 | Batch 50/140 | Loss: 1.5195 | LR: 0.000092
+  Epoch 11/50 | Batch 100/140 | Loss: 1.6205 | LR: 0.000091
+  Epoch 12/50 | Batch 50/140 | Loss: 1.9014 | LR: 0.000090
+  Epoch 12/50 | Batch 100/140 | Loss: 1.5949 | LR: 0.000089
+  Epoch 13/50 | Batch 50/140 | Loss: 1.4914 | LR: 0.000088
+  Epoch 13/50 | Batch 100/140 | Loss: 1.5460 | LR: 0.000087
+  Epoch 14/50 | Batch 50/140 | Loss: 1.3891 | LR: 0.000086
+  Epoch 14/50 | Batch 100/140 | Loss: 1.5461 | LR: 0.000085
+  Epoch 15/50 | Batch 50/140 | Loss: 1.4565 | LR: 0.000084
+  Epoch 15/50 | Batch 100/140 | Loss: 1.4039 | LR: 0.000083
+  Epoch 16/50 | Batch 50/140 | Loss: 1.6730 | LR: 0.000081
+  Epoch 16/50 | Batch 100/140 | Loss: 1.4214 | LR: 0.000080
+  Epoch 17/50 | Batch 50/140 | Loss: 1.5962 | LR: 0.000078
+  Epoch 17/50 | Batch 100/140 | Loss: 1.4193 | LR: 0.000077
+  Epoch 18/50 | Batch 50/140 | Loss: 1.2042 | LR: 0.000076
+  Epoch 18/50 | Batch 100/140 | Loss: 1.4178 | LR: 0.000075
+  Epoch 19/50 | Batch 50/140 | Loss: 1.4853 | LR: 0.000073
+  Epoch 19/50 | Batch 100/140 | Loss: 1.5969 | LR: 0.000072
+  Epoch 20/50 | Batch 50/140 | Loss: 1.3363 | LR: 0.000070
+  Epoch 20/50 | Batch 100/140 | Loss: 1.6352 | LR: 0.000069
+  [bdh_frac100] Ep  20/50 | Loss: 1.4669 | Val: 43.60% | Best: 44.00%
+  Epoch 21/50 | Batch 50/140 | Loss: 1.5162 | LR: 0.000067
+  Epoch 21/50 | Batch 100/140 | Loss: 1.4916 | LR: 0.000066
+  Epoch 22/50 | Batch 50/140 | Loss: 1.4266 | LR: 0.000064
+  Epoch 22/50 | Batch 100/140 | Loss: 1.4610 | LR: 0.000063
+  Epoch 23/50 | Batch 50/140 | Loss: 1.3914 | LR: 0.000061
+  Epoch 23/50 | Batch 100/140 | Loss: 1.5697 | LR: 0.000060
+  Epoch 24/50 | Batch 50/140 | Loss: 1.5145 | LR: 0.000058
+  Epoch 24/50 | Batch 100/140 | Loss: 1.3175 | LR: 0.000056
+  Epoch 25/50 | Batch 50/140 | Loss: 1.6333 | LR: 0.000054
+  Epoch 25/50 | Batch 100/140 | Loss: 1.2499 | LR: 0.000053
+  Epoch 26/50 | Batch 50/140 | Loss: 1.4324 | LR: 0.000051
+  Epoch 26/50 | Batch 100/140 | Loss: 1.3522 | LR: 0.000050
+  Epoch 27/50 | Batch 50/140 | Loss: 1.2457 | LR: 0.000048
+  Epoch 27/50 | Batch 100/140 | Loss: 1.1017 | LR: 0.000047
+  Epoch 28/50 | Batch 50/140 | Loss: 1.2504 | LR: 0.000045
+  Epoch 28/50 | Batch 100/140 | Loss: 1.2109 | LR: 0.000044
+  Epoch 29/50 | Batch 50/140 | Loss: 1.3811 | LR: 0.000041
+  Epoch 29/50 | Batch 100/140 | Loss: 1.3659 | LR: 0.000040
+  Epoch 30/50 | Batch 50/140 | Loss: 1.6034 | LR: 0.000038
+  Epoch 30/50 | Batch 100/140 | Loss: 1.4367 | LR: 0.000037
+  [bdh_frac100] Ep  30/50 | Loss: 1.3371 | Val: 48.20% | Best: 49.00%
+  Epoch 31/50 | Batch 50/140 | Loss: 1.1946 | LR: 0.000035
+  Epoch 31/50 | Batch 100/140 | Loss: 0.9726 | LR: 0.000034
+  Epoch 32/50 | Batch 50/140 | Loss: 1.2256 | LR: 0.000032
+  Epoch 32/50 | Batch 100/140 | Loss: 1.4493 | LR: 0.000031
+  Epoch 33/50 | Batch 50/140 | Loss: 1.0684 | LR: 0.000029
+  Epoch 33/50 | Batch 100/140 | Loss: 1.1477 | LR: 0.000028
+  Epoch 34/50 | Batch 50/140 | Loss: 1.1540 | LR: 0.000026
+  Epoch 34/50 | Batch 100/140 | Loss: 1.3489 | LR: 0.000025
+  Epoch 35/50 | Batch 50/140 | Loss: 1.1036 | LR: 0.000023
+  Epoch 35/50 | Batch 100/140 | Loss: 1.1392 | LR: 0.000023
+  Epoch 36/50 | Batch 50/140 | Loss: 1.4411 | LR: 0.000021
+  Epoch 36/50 | Batch 100/140 | Loss: 1.3949 | LR: 0.000020
+  Epoch 37/50 | Batch 50/140 | Loss: 1.2692 | LR: 0.000018
+  Epoch 37/50 | Batch 100/140 | Loss: 1.2172 | LR: 0.000017
+  Epoch 38/50 | Batch 50/140 | Loss: 1.2846 | LR: 0.000016
+  Epoch 38/50 | Batch 100/140 | Loss: 1.0139 | LR: 0.000015
+  Epoch 39/50 | Batch 50/140 | Loss: 1.0342 | LR: 0.000014
+  Epoch 39/50 | Batch 100/140 | Loss: 1.2954 | LR: 0.000013
+  Epoch 40/50 | Batch 50/140 | Loss: 1.0929 | LR: 0.000011
+  Epoch 40/50 | Batch 100/140 | Loss: 1.2655 | LR: 0.000011
+  [bdh_frac100] Ep  40/50 | Loss: 1.2438 | Val: 51.20% | Best: 51.20%
+  Epoch 41/50 | Batch 50/140 | Loss: 1.2253 | LR: 0.000009
+  Epoch 41/50 | Batch 100/140 | Loss: 1.1711 | LR: 0.000009
+  Epoch 42/50 | Batch 50/140 | Loss: 1.5594 | LR: 0.000008
+  Epoch 42/50 | Batch 100/140 | Loss: 1.1146 | LR: 0.000007
+  Epoch 43/50 | Batch 50/140 | Loss: 1.1360 | LR: 0.000006
+  Epoch 43/50 | Batch 100/140 | Loss: 1.1585 | LR: 0.000005
+  Epoch 44/50 | Batch 50/140 | Loss: 1.2642 | LR: 0.000005
+  Epoch 44/50 | Batch 100/140 | Loss: 1.2240 | LR: 0.000004
+  Epoch 45/50 | Batch 50/140 | Loss: 1.2887 | LR: 0.000003
+  Epoch 45/50 | Batch 100/140 | Loss: 1.4055 | LR: 0.000003
+  Epoch 46/50 | Batch 50/140 | Loss: 1.4293 | LR: 0.000002
+  Epoch 46/50 | Batch 100/140 | Loss: 1.4968 | LR: 0.000002
+  Epoch 47/50 | Batch 50/140 | Loss: 1.1680 | LR: 0.000001
+  Epoch 47/50 | Batch 100/140 | Loss: 1.2085 | LR: 0.000001
