@@ -67,12 +67,33 @@ vision-bdh-stl10/
     └── kaggle_setup.py           # Kaggle environment setup
 ```
 
-## results till now
+## Key Results
 
-| Model | STL-10 Acc | Params |
-|-------|------------|--------|
-| Vision-BDH v2 (ours) | 53.04% | 3.2M | 
-| ViT-Tiny | 56.69% | 5.4M |
+### Main Comparison (full STL-10, 50 epochs)
+| Model       | Test Acc | Params | 
+|-------------|----------|--------|
+| ViT-Tiny    | 56.69%   | 5.4M   |
+| Vision-BDH (ours) | 53.04% | 3.2M  |
+
+### Attention Mechanism Ablation
+| Variant            | Test Acc |
+|--------------------|----------|
+| BDH (no modification) | 51.54% |
+| + Root-N scaling   | 51.95%   |
+| + Gating only      | 53.04%   |
+| + Both             | 51.95%   |
+
+### Label Efficiency (BDH vs ViT across data fractions)
+### Label Efficiency (BDH vs ViT across data fractions)
+| Data Fraction | BDH Val | BDH Test | ViT Val | ViT Test | Winner (Test) |
+|---------------|---------|----------|---------|----------|---------------|
+| 10% (450 samples) | 40.00% | **37.24%** | 37.40% | 34.65% | **BDH** |
+| 25% (1120 samples) | 42.80% | 41.67% | 46.40% | **42.36%** | ViT |
+| 50% (2250 samples) | 51.00% | 47.69% | 52.40% | **50.80%** | ViT |
+
+**Finding:** BDH outperforms ViT-Tiny at low data despite 40% fewer parameters,
+suggesting parameter efficiency acts as implicit regularization under data scarcity.
+
 
 ## Citation
 
