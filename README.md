@@ -71,7 +71,7 @@ vision-bdh-stl10/
 
 | Model | STL-10 Acc | Params |
 |-------|------------|--------|
-| Vision-BDH v2 (ours) | 51.95% | 3.2M | 
+| Vision-BDH v2 (ours) | 53.04% | 3.2M | 
 | ViT-Tiny | 56.69% | 5.4M |
 
 ## Citation
