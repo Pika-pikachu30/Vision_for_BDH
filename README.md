@@ -93,8 +93,17 @@ vision-bdh-stl10/
 **Finding:** BDH outperforms ViT-Tiny at low data despite 40% fewer parameters,
 suggesting parameter efficiency acts as implicit regularization under data scarcity.
 
-
+```bitex
 ## Citation
+If you use this work, please cite:
+
+@misc{aarsh2026visionbdhstl10,
+  author = {Aarsh Verma},
+  title  = {Vision-BDH Beyond 32x32: STL-10 Experiments},
+  year   = {2026},
+  url    = {https://github.com/Pika-pikachu30/Vision_for_BDH}
+}
+```
 
 ```bibtex
 @software{pika2025visionbdh,
