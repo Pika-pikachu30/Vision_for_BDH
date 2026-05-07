@@ -84,7 +84,6 @@ vision-bdh-stl10/
 | + Both             | 51.95%   |
 
 ### Label Efficiency (BDH vs ViT across data fractions)
-### Label Efficiency (BDH vs ViT across data fractions)
 | Data Fraction | BDH Val | BDH Test | ViT Val | ViT Test | Winner (Test) |
 |---------------|---------|----------|---------|----------|---------------|
 | 10% (450 samples) | 40.00% | **37.24%** | 37.40% | 34.65% | **BDH** |
